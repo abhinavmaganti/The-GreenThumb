@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace — Green Thumb</title>
+  <meta name="description" content="Share, trade, and find fresh local produce, seeds, and plants from gardeners near you." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🌱</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+
+  <section class="page-hero">
+    <p class="label fade-up d1">Marketplace</p>
+    <h1 class="display display-lg fade-up d2">Share & Trade</h1>
+    <p class="fade-up d3">Fresh produce, seeds, seedlings, and tools from local gardeners. Give freely, trade fairly, waste nothing.</p>
+    <div style="margin-top:1.5rem" class="fade-up d4">
+      <a href="profile.html" class="btn btn-solid btn-large">+ Add Your Listing</a>
+    </div>
+  </section>
+
+  <section class="section">
+
+    <div class="filter-bar fade-up observe">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search listings…" />
+      </div>
+      <div class="filter-chips">
+        <button class="chip active">All</button>
+        <button class="chip">Free</button>
+        <button class="chip">Trade</button>
+        <button class="chip">For Sale</button>
+        <button class="chip">Seeds</button>
+        <button class="chip">Produce</button>
+        <button class="chip">Plants</button>
+        <button class="chip">Tools</button>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
+      <p style="font-size:0.85rem;color:var(--muted)">Showing <strong>24 listings</strong> near you</p>
+      <select style="border:1px solid var(--border);border-radius:8px;padding:0.4rem 0.75rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--text);background:var(--white);outline:none">
+        <option>Nearest first</option>
+        <option>Most recent</option>
+        <option>Free first</option>
+      </select>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="card listing-card fade-up observe d1" data-filter>
+        <div class="card-img" style="background:#b8d4b0;font-size:2.5rem">🍅<div class="card-badge">Free</div></div>
+        <div class="card-body">
+          <h3>Heritage Tomatoes (mixed)</h3>
+          <p>Surplus from my greenhouse — mixed heirloom varieties, fully organic. Ready now.</p>
+          <div class="listing-meta">
+            <span>📍 East Side, 0.8 mi</span>
+            <span>🌿 Maria K.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Produce</span><span class="tag">Organic</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Free</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d2" data-filter>
+        <div class="card-img" style="background:#c5d9b5;font-size:2.5rem">🌿<div class="card-badge">Trade</div></div>
+        <div class="card-body">
+          <h3>Fresh Herb Bundle</h3>
+          <p>Basil, rosemary, thyme. Looking to trade for salad greens or root vegetables.</p>
+          <div class="listing-meta">
+            <span>📍 Northfield, 1.2 mi</span>
+            <span>🌿 James P.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Produce</span><span class="tag">Trade</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Trade</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d3" data-filter>
+        <div class="card-img" style="background:#d9c9a8;font-size:2.5rem">🥕<div class="card-badge">£2/bag</div></div>
+        <div class="card-body">
+          <h3>Rainbow Carrots</h3>
+          <p>Grown without pesticides in raised beds. Available weekends at community garden.</p>
+          <div class="listing-meta">
+            <span>📍 Riverside, 2.1 mi</span>
+            <span>🌿 Priya S.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Produce</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">£2 / bag</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d1" data-filter>
+        <div class="card-img" style="background:#c8d0a8;font-size:2.5rem">🫘<div class="card-badge">Free</div></div>
+        <div class="card-body">
+          <h3>Runner Bean Seeds</h3>
+          <p>Saved seeds from last year's crop — Scarlet Emperor variety, 30 seeds per packet.</p>
+          <div class="listing-meta">
+            <span>📍 Westpark, 1.5 mi</span>
+            <span>🌿 Owen T.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Seeds</span><span class="tag">Saved</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Free</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d2" data-filter>
+        <div class="card-img" style="background:#d4c0b0;font-size:2.5rem">🪴<div class="card-badge">£5 each</div></div>
+        <div class="card-body">
+          <h3>Chilli Plant Seedlings</h3>
+          <p>6 week old chilli seedlings — Carolina Reaper and Jalapeño. Hardened off and ready to plant.</p>
+          <div class="listing-meta">
+            <span>📍 Old Town, 0.5 mi</span>
+            <span>🌿 Fiona B.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Plants</span><span class="tag">Seedlings</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">£5 each</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d3" data-filter>
+        <div class="card-img" style="background:#b0c8c0;font-size:2.5rem">🔧<div class="card-badge">Lend</div></div>
+        <div class="card-body">
+          <h3>Garden Fork & Spade</h3>
+          <p>Happy to lend for a weekend. Collection and return from my address required.</p>
+          <div class="listing-meta">
+            <span>📍 Hillside, 3.2 mi</span>
+            <span>🌿 David M.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Tools</span><span class="tag">Lend</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Free to borrow</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d1" data-filter>
+        <div class="card-img" style="background:#d4b8c0;font-size:2.5rem">🍓<div class="card-badge">Trade</div></div>
+        <div class="card-body">
+          <h3>Strawberry Runners</h3>
+          <p>Dozens of runners from established beds — Cambridge Favourite variety. Would love tomato seedlings in return.</p>
+          <div class="listing-meta">
+            <span>📍 Southgate, 1.8 mi</span>
+            <span>🌿 Lily C.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Plants</span><span class="tag">Trade</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Trade</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d2" data-filter>
+        <div class="card-img" style="background:#b8c4d4;font-size:2.5rem">🥬<div class="card-badge">Free</div></div>
+        <div class="card-body">
+          <h3>Surplus Kale & Chard</h3>
+          <p>More than we can eat! Cut leaves available Mon–Fri. Just bring a bag.</p>
+          <div class="listing-meta">
+            <span>📍 Centre, 0.3 mi</span>
+            <span>🌿 Asha R.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Produce</span><span class="tag">Organic</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Free</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+      <div class="card listing-card fade-up observe d3" data-filter>
+        <div class="card-img" style="background:#c4b8d4;font-size:2.5rem">🌸<div class="card-badge">Free</div></div>
+        <div class="card-body">
+          <h3>Lavender Cuttings</h3>
+          <p>Rooted lavender cuttings — Hidcote variety. Great for pollinators and borders.</p>
+          <div class="listing-meta">
+            <span>📍 Garden Quarter, 2.5 mi</span>
+            <span>🌿 Nina H.</span>
+          </div>
+          <div class="card-tags"><span class="tag">Plants</span><span class="tag">Pollinators</span></div>
+        </div>
+        <div class="card-footer">
+          <span class="price-tag">Free</span>
+          <a href="profile.html" class="btn btn-solid" style="padding:0.35rem 0.9rem;font-size:0.78rem">Contact</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="mission-banner">
+    <p class="label" style="color:rgba(255,255,255,0.5);margin-bottom:1rem">Got something to share?</p>
+    <h2 class="display display-md">Your surplus is someone's treasure</h2>
+    <p>List your spare produce, seeds, or tools for free. It takes less than 2 minutes.</p>
+    <a href="profile.html" class="btn btn-large" style="background:white;color:var(--green)">Create a Listing</a>
+  </section>
+
+</main>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
