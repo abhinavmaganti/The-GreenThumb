@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — Green Thumb</title>
+  <meta name="description" content="Join the Green Thumb community. Share tips, ask questions, and connect with local gardeners." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🌱</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+
+  <section class="page-hero">
+    <p class="label fade-up d1">Community & Forum</p>
+    <h1 class="display display-lg fade-up d2">Grow together</h1>
+    <p class="fade-up d3">Ask questions, share successes (and failures!), swap tips, and connect with gardeners in your community.</p>
+  </section>
+
+  <section class="section">
+    <div style="display:grid;grid-template-columns:1fr 320px;gap:2.5rem;align-items:start" class="community-layout">
+
+      <!-- MAIN FEED -->
+      <div>
+        <!-- NEW POST BOX -->
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem" class="fade-up observe">
+          <p class="label" style="margin-bottom:1rem">Share something with the community</p>
+          <textarea style="width:100%;border:1px solid var(--border);border-radius:8px;padding:0.75rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;resize:vertical;min-height:90px;color:var(--text);outline:none;background:var(--off-white)" placeholder="Ask a question, share a tip, or post a photo of your garden…"></textarea>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.75rem;flex-wrap:wrap;gap:0.5rem">
+            <div style="display:flex;gap:0.5rem">
+              <button class="chip" style="font-size:0.75rem">📷 Photo</button>
+              <button class="chip" style="font-size:0.75rem">🏷 Tag Topic</button>
+            </div>
+            <a href="profile.html" class="btn btn-solid">Post</a>
+          </div>
+        </div>
+
+        <!-- TOPIC FILTER -->
+        <div class="filter-chips fade-up observe" style="margin-bottom:1.5rem">
+          <button class="chip active">All Posts</button>
+          <button class="chip">Growing Tips</button>
+          <button class="chip">Pests & Disease</button>
+          <button class="chip">Recipes</button>
+          <button class="chip">Seed Swap</button>
+          <button class="chip" id="tips">Seasonal</button>
+        </div>
+
+        <!-- POSTS -->
+        <div class="post-list">
+
+          <div class="post-item fade-up observe">
+            <div class="post-avatar" style="background:var(--green)">M</div>
+            <div class="post-content" style="flex:1">
+              <h3>Anyone had success with no-dig beds? My soil is clay-heavy 😬</h3>
+              <p>I've been reading about no-dig methods and I'm tempted to try it for my raised beds this year. Would love to hear from anyone who's had results on heavy clay soil.</p>
+              <div class="card-tags" style="margin-top:0.6rem"><span class="tag">Growing Tips</span></div>
+              <div class="post-meta">
+                <span>🌿 Maria K.</span>
+                <span>2 hours ago</span>
+                <span>💬 8 replies</span>
+                <span>❤️ 14</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-item fade-up observe">
+            <div class="post-avatar" style="background:#8aa898">J</div>
+            <div class="post-content" style="flex:1">
+              <h3>Courgette plants wilting after transplant — any advice?</h3>
+              <p>Moved my courgette seedlings outside last week and three of them are looking limp. They were perfect indoors. I hardened them off for about 5 days. What am I missing?</p>
+              <div class="card-tags" style="margin-top:0.6rem"><span class="tag">Growing Tips</span><span class="tag">Help Needed</span></div>
+              <div class="post-meta">
+                <span>🌿 James P.</span>
+                <span>5 hours ago</span>
+                <span>💬 12 replies</span>
+                <span>❤️ 6</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-item fade-up observe">
+            <div class="post-avatar" style="background:#a87848">P</div>
+            <div class="post-content" style="flex:1">
+              <h3>🍅 First tomato of the season! Gardener's Delight from seed</h3>
+              <p>Sowed in February, planted out in May and here we are — first harvest of the year. These small sweet varieties are just unbeatable. Sharing the surplus on the marketplace if anyone nearby wants some!</p>
+              <div class="card-tags" style="margin-top:0.6rem"><span class="tag">Harvest</span><span class="tag">Tomatoes</span></div>
+              <div class="post-meta">
+                <span>🌿 Priya S.</span>
+                <span>Yesterday</span>
+                <span>💬 22 replies</span>
+                <span>❤️ 48</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-item fade-up observe">
+            <div class="post-avatar" style="background:#5880a0">O</div>
+            <div class="post-content" style="flex:1">
+              <h3>Companion planting guide I made for my allotment — happy to share!</h3>
+              <p>Spent the winter researching companion planting combinations. Made a simple chart for myself and thought others might find it useful. Marigolds + tomatoes, nasturtiums + brassicas, the classics work!</p>
+              <div class="card-tags" style="margin-top:0.6rem"><span class="tag">Resource</span><span class="tag">Companion Planting</span></div>
+              <div class="post-meta">
+                <span>🌿 Owen T.</span>
+                <span>2 days ago</span>
+                <span>💬 17 replies</span>
+                <span>❤️ 93</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-item fade-up observe">
+            <div class="post-avatar" style="background:#c07858">F</div>
+            <div class="post-content" style="flex:1">
+              <h3>Blackfly destroying my broad beans — organic control?</h3>
+              <p>Every year the same problem! Blackfly colonies on the tips of my broad beans. I prefer to avoid chemical sprays. Tried pinching out the tops but they just moved lower. What do you all do?</p>
+              <div class="card-tags" style="margin-top:0.6rem"><span class="tag">Pests & Disease</span><span class="tag">Organic</span></div>
+              <div class="post-meta">
+                <span>🌿 Fiona B.</span>
+                <span>3 days ago</span>
+                <span>💬 31 replies</span>
+                <span>❤️ 27</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-item fade-up observe">
+            <div class="post-avatar" style="background:#7090a0">A</div>
+            <div class="post-content" style="flex:1">
+              <h3>Simple courgette fritter recipe — using up the glut!</h3>
+              <p>It's that time of year again. Found a brilliant recipe using courgette, feta, and mint. Great way to use up the harvest before sharing the rest. DM me for the recipe!</p>
+              <div class="card-tags" style="margin-top:0.6rem"><span class="tag">Recipes</span><span class="tag">Courgette</span></div>
+              <div class="post-meta">
+                <span>🌿 Asha R.</span>
+                <span>4 days ago</span>
+                <span>💬 9 replies</span>
+                <span>❤️ 38</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-lg fade-up observe">
+          <button class="btn btn-outline btn-large">Load more posts</button>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem" class="fade-up observe">
+
+        <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem">
+          <p class="label" style="margin-bottom:1rem">Seasonal Tips</p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div style="font-size:0.85rem;padding:0.75rem;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+              🌱 <strong>Sow courgettes</strong> — last chance to start indoors before direct sowing outside
+            </div>
+            <div style="font-size:0.85rem;padding:0.75rem;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+              🪴 <strong>Harden off tomatoes</strong> — ease plants into outdoor life over 7–10 days
+            </div>
+            <div style="font-size:0.85rem;padding:0.75rem;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+              ✂️ <strong>Pinch out basil</strong> — remove flowers to encourage leafy growth
+            </div>
+            <div style="font-size:0.85rem;padding:0.75rem;background:var(--white);border-radius:8px;border:1px solid var(--border)">
+              🌧 <strong>Water deeply</strong> — less frequent deep watering builds stronger root systems
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem">
+          <p class="label" style="margin-bottom:1rem">Active Gardeners</p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0">P</div>
+              <div><strong>Priya S.</strong><br><span style="color:var(--muted);font-size:0.78rem">Tomatoes · Herbs · Chillies</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem">
+              <div style="width:36px;height:36px;border-radius:50%;background:#8aa898;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0">O</div>
+              <div><strong>Owen T.</strong><br><span style="color:var(--muted);font-size:0.78rem">Allotment · Broad Beans · Squash</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem">
+              <div style="width:36px;height:36px;border-radius:50%;background:#a87848;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0">M</div>
+              <div><strong>Maria K.</strong><br><span style="color:var(--muted);font-size:0.78rem">No-dig · Salads · Polytunnel</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--green);border-radius:var(--radius);padding:1.5rem;color:white">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:0.5rem">Join the community</p>
+          <p style="font-size:0.82rem;opacity:0.8;margin-bottom:1.25rem">Connect with 2,400+ local gardeners sharing tips, seeds, and surplus produce.</p>
+          <a href="profile.html" class="btn btn-large" style="background:white;color:var(--green);width:100%;justify-content:center">Create free account</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  @media (max-width: 900px) {
+    .community-layout { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
