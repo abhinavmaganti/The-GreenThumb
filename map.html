@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Map — Green Thumb</title>
+  <meta name="description" content="Find local gardeners, community gardens, and fresh produce near you on the Green Thumb map." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🌱</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map { width: 100%; height: 100%; min-height: 480px; z-index: 1; }
+    .leaflet-popup-content-wrapper {
+      border-radius: 10px !important;
+      box-shadow: 0 4px 24px rgba(58,90,64,0.15) !important;
+    }
+    .leaflet-control-zoom a {
+      font-family: 'DM Sans', sans-serif !important;
+      color: var(--text) !important;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <section class="page-hero">
+    <p class="label fade-up d1">Local Map</p>
+    <h1 class="display display-lg fade-up d2">Gardeners near you</h1>
+    <p class="fade-up d3">Discover who's growing in your neighbourhood. Click a marker to see what they're sharing.</p>
+  </section>
+
+  <section class="section">
+
+    <!-- MAP CONTROLS -->
+    <div class="filter-bar fade-up observe" style="margin-bottom:1.5rem">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="location-search" placeholder="Search by postcode or area…" />
+      </div>
+      <div class="filter-chips">
+        <button class="chip active" data-type="all">All</button>
+        <button class="chip" data-type="produce">🥦 Produce</button>
+        <button class="chip" data-type="seeds">🌱 Seeds</button>
+        <button class="chip" data-type="community">🏡 Community Garden</button>
+      </div>
+      <button class="btn btn-outline" id="locate-me">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        Near me
+      </button>
+    </div>
+
+    <!-- MAP + SIDEBAR -->
+    <div class="map-sidebar fade-up observe">
+
+      <!-- NEARBY LIST -->
+      <div class="nearby-list">
+        <p class="label" style="margin-bottom:0.75rem">Nearby Gardeners</p>
+
+        <div class="nearby-item">
+          <h4>Maria's Urban Garden</h4>
+          <p>Heritage tomatoes, courgettes & herbs</p>
+          <div class="dist">🌿 Produce · 0.8 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>The Allotment Collective</h4>
+          <p>Community plot — shared tools & seed library</p>
+          <div class="dist">🏡 Community Garden · 1.1 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>James & Ruth</h4>
+          <p>Fresh herb bundles available this weekend</p>
+          <div class="dist">🌿 Produce · 1.2 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>Priya's Rooftop Plot</h4>
+          <p>Rainbow carrots, kale, and chilli seedlings</p>
+          <div class="dist">🌱 Seeds & Plants · 2.1 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>Greenpoint Seed Library</h4>
+          <p>Free seeds — bring some, take some</p>
+          <div class="dist">🌱 Seeds · 2.4 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>Owen's Allotment</h4>
+          <p>Broad beans, squash & saving seeds</p>
+          <div class="dist">🌿 Produce · 2.8 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>St. Anne's Community Garden</h4>
+          <p>Open Saturdays — volunteers welcome</p>
+          <div class="dist">🏡 Community Garden · 3.5 mi</div>
+        </div>
+        <div class="nearby-item">
+          <h4>Fiona's Backyard</h4>
+          <p>Lavender cuttings & strawberry runners</p>
+          <div class="dist">🌱 Plants · 3.8 mi</div>
+        </div>
+      </div>
+
+      <!-- LEAFLET MAP -->
+      <div class="map-wrap">
+        <div id="map"></div>
+      </div>
+
+    </div>
+
+    <!-- HOW TO JOIN MAP -->
+    <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-top:2.5rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap" class="fade-up observe">
+      <div style="font-size:2.5rem">📍</div>
+      <div style="flex:1">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:0.3rem">Add your garden to the map</h3>
+        <p style="font-size:0.88rem;color:var(--muted)">Create a free account to appear on the map, list what you're growing, and connect with neighbours.</p>
+      </div>
+      <a href="profile.html" class="btn btn-solid btn-large">Join & Get Listed</a>
+    </div>
+
+  </section>
+
+</main>
+<script src="js/layout.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Locate me button
+  const locateBtn = document.getElementById('locate-me');
+  if (locateBtn) {
+    locateBtn.addEventListener('click', () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          if (window._gtMap) window._gtMap.setView([pos.coords.latitude, pos.coords.longitude], 14);
+        });
+      }
+    });
+  }
+  // Store map ref globally so locate btn can use it
+  const origInit = window.initMap;
+  window.initMap = function() {
+    origInit && origInit();
+    // Expose map for locate btn (main.js creates it as local var)
+    // re-init here directly for reliability
+    const mapEl = document.getElementById('map');
+    if (!mapEl || typeof L === 'undefined') return;
+    if (mapEl._leaflet_id) return; // already inited
+    const map = L.map('map').setView([51.505, -0.09], 12);
+    window._gtMap = map;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+    const greenIcon = L.divIcon({
+      className: '',
+      html: `<div style="width:32px;height:32px;border-radius:50%;background:#3a5a40;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;color:white;font-size:14px;">🌱</div>`,
+      iconSize: [32, 32], iconAnchor: [16, 16]
+    });
+    const gardeners = [
+      { name: "Maria's Urban Garden",     lat: 51.520, lng: -0.075, type: 'Produce',           items: 'Tomatoes, Courgettes, Herbs' },
+      { name: "The Allotment Collective", lat: 51.515, lng: -0.110, type: 'Community Garden',  items: 'Shared tools & seed library' },
+      { name: "James & Ruth",             lat: 51.525, lng: -0.085, type: 'Produce',           items: 'Fresh herb bundles' },
+      { name: "Priya's Rooftop Plot",     lat: 51.508, lng: -0.070, type: 'Seeds & Plants',    items: 'Rainbow carrots, Kale, Chilli seedlings' },
+      { name: "Greenpoint Seed Library",  lat: 51.533, lng: -0.095, type: 'Seeds',             items: 'Free community seed library' },
+      { name: "Owen's Allotment",         lat: 51.540, lng: -0.100, type: 'Produce',           items: 'Broad beans, Squash' },
+      { name: "St. Anne's Community Garden", lat: 51.498, lng: -0.115, type: 'Community Garden', items: 'Open Saturdays' },
+    ];
+    gardeners.forEach(g => {
+      const popup = `<div style="font-family:'DM Sans',sans-serif;min-width:180px;padding:4px">
+        <strong style="font-size:0.9rem;display:block;margin-bottom:2px">${g.name}</strong>
+        <span style="font-size:0.75rem;color:#7a8a76;display:block;margin-bottom:4px">${g.type}</span>
+        <span style="font-size:0.8rem;color:#3a5a40">🌿 ${g.items}</span>
+        <a href="marketplace.html" style="font-size:0.78rem;color:#3a5a40;display:block;margin-top:8px;font-weight:500">View Listings →</a>
+      </div>`;
+      L.marker([g.lat, g.lng], { icon: greenIcon }).addTo(map).bindPopup(popup);
+    });
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        map.setView([pos.coords.latitude, pos.coords.longitude], 13);
+        L.circleMarker([pos.coords.latitude, pos.coords.longitude], {
+          radius: 8, fillColor: '#3a5a40', color: 'white', weight: 2, fillOpacity: 1
+        }).addTo(map).bindPopup('<b style="font-family:DM Sans,sans-serif">You are here</b>');
+      }, () => {});
+    }
+  };
+  window.addEventListener('load', () => { window.initMap && window.initMap(); });
+</script>
+</body>
+</html>

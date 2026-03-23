@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Library — Green Thumb</title>
+  <meta name="description" content="Browse 140+ plant guides for eco-friendly, sustainable home gardening." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🌱</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+
+  <section class="page-hero">
+    <p class="label fade-up d1">Plant Library & Garden Guides</p>
+    <h1 class="display display-lg fade-up d2">Grow with confidence</h1>
+    <p class="fade-up d3">Expert guides for 140+ plants — from sowing to harvest, tailored for home gardeners at every level.</p>
+  </section>
+
+  <section class="section">
+    <!-- FILTER BAR -->
+    <div class="filter-bar fade-up observe">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search plants…" />
+      </div>
+      <div class="filter-chips">
+        <button class="chip active">All</button>
+        <button class="chip">Vegetables</button>
+        <button class="chip">Fruits</button>
+        <button class="chip">Herbs</button>
+        <button class="chip">Flowers</button>
+        <button class="chip">Beginner</button>
+      </div>
+    </div>
+
+    <!-- SEASONAL BANNER -->
+    <div class="notice fade-up observe">
+      🌸 <strong>Spring is here!</strong> Now is the perfect time to sow tomatoes, courgettes, and beans indoors before transplanting outside.
+    </div>
+
+    <!-- PLANT CARDS -->
+    <div class="cards-grid">
+      <!-- Row 1 -->
+      <div class="card fade-up observe d1" data-filter>
+        <div class="card-img" style="background:#b8d4b0;font-size:2.5rem">🍅<div class="card-badge">Popular</div></div>
+        <div class="card-body">
+          <h3>Tomatoes</h3>
+          <p>The classic home garden crop. Grow indeterminate or bush varieties — full sun, rich soil, and regular watering.</p>
+          <div class="card-tags"><span class="tag">Vegetables</span><span class="tag">Beginner</span><span class="tag">Summer</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 15 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <div class="card fade-up observe d2" data-filter>
+        <div class="card-img" style="background:#c0d9a8;font-size:2.5rem">🥒</div>
+        <div class="card-body">
+          <h3>Courgette / Zucchini</h3>
+          <p>Incredibly productive. One or two plants can feed a family through summer. Great for small gardens.</p>
+          <div class="card-tags"><span class="tag">Vegetables</span><span class="tag">Beginner</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 10 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <div class="card fade-up observe d3" data-filter>
+        <div class="card-img" style="background:#d9c8a0;font-size:2.5rem">🥕</div>
+        <div class="card-body">
+          <h3>Carrots</h3>
+          <p>Best sown direct into deep, loose, stone-free soil. Multiple succession sowings give a year-long harvest.</p>
+          <div class="card-tags"><span class="tag">Vegetables</span><span class="tag">Intermediate</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 8 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card fade-up observe d1" data-filter>
+        <div class="card-img" style="background:#d4b8c0;font-size:2.5rem">🍓</div>
+        <div class="card-body">
+          <h3>Strawberries</h3>
+          <p>Grow in containers, raised beds, or hanging baskets. Runners spread year on year for free plants.</p>
+          <div class="card-tags"><span class="tag">Fruits</span><span class="tag">Beginner</span><span class="tag">Container</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 10 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <div class="card fade-up observe d2" data-filter>
+        <div class="card-img" style="background:#c8d4b0;font-size:2.5rem">🌿</div>
+        <div class="card-body">
+          <h3>Basil</h3>
+          <p>Love of warmth and sun. Pinch out flowers to keep bushy and extend harvest well into autumn.</p>
+          <div class="card-tags"><span class="tag">Herbs</span><span class="tag">Beginner</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 6 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <div class="card fade-up observe d3" data-filter>
+        <div class="card-img" style="background:#c0c8d4;font-size:2.5rem">🫐</div>
+        <div class="card-body">
+          <h3>Blueberries</h3>
+          <p>Need acidic soil (pH 4.5–5.5). Grow in ericaceous compost for best results. Long-lived perennial shrub.</p>
+          <div class="card-tags"><span class="tag">Fruits</span><span class="tag">Intermediate</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 12 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="card fade-up observe d1" data-filter>
+        <div class="card-img" style="background:#d4c0b8;font-size:2.5rem">🌶</div>
+        <div class="card-body">
+          <h3>Chilli Peppers</h3>
+          <p>Start indoors in late winter, transplant when the weather warms. Harvest when red for the most heat.</p>
+          <div class="card-tags"><span class="tag">Vegetables</span><span class="tag">Intermediate</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 12 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <div class="card fade-up observe d2" data-filter>
+        <div class="card-img" style="background:#b8c4d4;font-size:2.5rem">🫛</div>
+        <div class="card-body">
+          <h3>Runner Beans</h3>
+          <p>Fast-growing climbers that reward you with prolific crops all summer. Great for children to grow.</p>
+          <div class="card-tags"><span class="tag">Vegetables</span><span class="tag">Beginner</span><span class="tag">Kids</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 9 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+
+      <div class="card fade-up observe d3" data-filter>
+        <div class="card-img" style="background:#c8d0b8;font-size:2.5rem">🌻</div>
+        <div class="card-body">
+          <h3>Sunflowers</h3>
+          <p>Easy to grow and great for pollinators. Edible seeds make them a dual-purpose garden plant.</p>
+          <div class="card-tags"><span class="tag">Flowers</span><span class="tag">Beginner</span><span class="tag">Pollinators</span></div>
+        </div>
+        <div class="card-footer"><span>⏱ 7 min</span><a href="#" style="color:var(--green);font-size:0.8rem">Read guide →</a></div>
+      </div>
+    </div>
+
+    <!-- GROWING CALENDAR -->
+    <div class="mt-lg fade-up observe">
+      <div class="section-header">
+        <p class="label">Seasonal Calendar</p>
+        <h2 class="display display-md">What to grow, when</h2>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border)">
+              <th style="text-align:left;padding:0.75rem 1rem;color:var(--muted);font-weight:500">Plant</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Jan</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Feb</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Mar</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Apr</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">May</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Jun</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Jul</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Aug</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Sep</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Oct</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Nov</th>
+              <th style="padding:0.5rem;color:var(--muted);font-weight:500">Dec</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body"></tbody>
+        </table>
+      </div>
+      <div style="display:flex;gap:1.5rem;margin-top:1rem;font-size:0.75rem;color:var(--muted)">
+        <span><span style="display:inline-block;width:12px;height:12px;background:rgba(58,90,64,0.2);border-radius:2px;margin-right:5px"></span>Sow indoors</span>
+        <span><span style="display:inline-block;width:12px;height:12px;background:rgba(58,90,64,0.6);border-radius:2px;margin-right:5px"></span>Sow/Plant outside</span>
+        <span><span style="display:inline-block;width:12px;height:12px;background:var(--green);border-radius:2px;margin-right:5px"></span>Harvest</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Simple growing calendar data
+  const calendar = [
+    { plant: 'Tomatoes',   data: [0,1,1,1,2,2,3,3,3,0,0,0] },
+    { plant: 'Courgette',  data: [0,0,1,1,2,2,3,3,3,0,0,0] },
+    { plant: 'Carrots',    data: [0,0,2,2,2,3,3,3,3,2,0,0] },
+    { plant: 'Strawberry', data: [0,0,2,2,3,3,3,0,0,2,0,0] },
+    { plant: 'Basil',      data: [0,0,1,1,2,2,3,3,2,0,0,0] },
+    { plant: 'Runner Bean',data: [0,0,0,1,2,2,3,3,2,0,0,0] },
+  ];
+  const colors = ['transparent','rgba(58,90,64,0.15)','rgba(58,90,64,0.5)','var(--green)'];
+  const tbody = document.getElementById('calendar-body');
+  calendar.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.style.borderBottom = '1px solid var(--border)';
+    tr.innerHTML = `<td style="padding:0.6rem 1rem;font-weight:500">${row.plant}</td>` +
+      row.data.map(v => `<td style="padding:0.4rem;text-align:center"><div style="width:24px;height:24px;border-radius:4px;background:${colors[v]};margin:auto"></div></td>`).join('');
+    tbody.appendChild(tr);
+  });
+</script>
+</body>
+</html>

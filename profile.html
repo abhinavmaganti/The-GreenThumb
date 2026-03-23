@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — Green Thumb</title>
+  <meta name="description" content="Sign in or create your Green Thumb account to connect with local gardeners." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🌱</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+
+  <!-- AUTH VIEW (shown when not logged in) -->
+  <section class="section" id="auth-view" style="min-height:80vh;display:flex;align-items:center;justify-content:center">
+    <div style="width:100%;max-width:960px;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="auth-layout">
+
+      <!-- LEFT: VALUE PROP -->
+      <div class="fade-up d1">
+        <p class="label" style="margin-bottom:1rem">Join Green Thumb</p>
+        <h1 class="display display-lg" style="margin-bottom:1.25rem">Your garden.<br>Your community.</h1>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.7;margin-bottom:2rem">
+          Connect with local growers, share your surplus, discover fresh produce, and be part of the movement for a more sustainable, community-led food economy.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem">
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem">
+            <span style="width:28px;height:28px;background:rgba(58,90,64,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);flex-shrink:0">✓</span>
+            <span>List surplus produce, seeds, and plants for free</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem">
+            <span style="width:28px;height:28px;background:rgba(58,90,64,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);flex-shrink:0">✓</span>
+            <span>Appear on the local growers map</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem">
+            <span style="width:28px;height:28px;background:rgba(58,90,64,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);flex-shrink:0">✓</span>
+            <span>Join community discussions and get growing advice</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem">
+            <span style="width:28px;height:28px;background:rgba(58,90,64,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);flex-shrink:0">✓</span>
+            <span>Save plant guides and track your garden</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: AUTH FORM -->
+      <div class="auth-wrap fade-up d2">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-panel="panel-signup">Create Account</button>
+          <button class="auth-tab" data-panel="panel-signin">Sign In</button>
+        </div>
+
+        <!-- SIGN UP PANEL -->
+        <div id="panel-signup" class="auth-panel">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="e.g. Maria Kowalski" />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Postcode / Location</label>
+            <input type="text" placeholder="e.g. SW1A 1AA" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="At least 8 characters" />
+          </div>
+          <button class="btn btn-solid btn-full" onclick="showProfile()">Create Free Account</button>
+          <p style="font-size:0.75rem;color:var(--muted);margin-top:1rem;text-align:center;line-height:1.5">
+            By joining you agree to our terms. We'll never share your data with third parties.
+          </p>
+        </div>
+
+        <!-- SIGN IN PANEL -->
+        <div id="panel-signin" class="auth-panel" style="display:none">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Your password" />
+          </div>
+          <button class="btn btn-solid btn-full" onclick="showProfile()">Sign In</button>
+          <div class="divider">or</div>
+          <button class="btn btn-outline btn-full" onclick="showProfile()">Continue with Google</button>
+          <p style="font-size:0.78rem;color:var(--muted);margin-top:1rem;text-align:center">
+            <a href="#" style="color:var(--green)">Forgot password?</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROFILE VIEW (shown after login) -->
+  <div id="profile-view" style="display:none">
+
+    <div class="profile-header">
+      <div class="profile-avatar">M</div>
+      <div class="profile-info">
+        <p class="label" style="margin-bottom:0.4rem">My Profile</p>
+        <h2 class="display display-md">Maria Kowalski</h2>
+        <p>📍 East Side · Joined Spring 2024</p>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:0.3rem">Growing tomatoes, herbs, and salad leaves 🌿</p>
+        <div class="profile-stats">
+          <div><div class="stat-num">12</div><div class="stat-label">Listings</div></div>
+          <div><div class="stat-num">47</div><div class="stat-label">Items Shared</div></div>
+          <div><div class="stat-num">89</div><div class="stat-label">Community Posts</div></div>
+        </div>
+      </div>
+      <div style="margin-left:auto">
+        <button class="btn btn-outline" onclick="showAuth()">Sign Out</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start" class="profile-grid">
+
+        <!-- MY LISTINGS -->
+        <div class="fade-up observe">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
+            <p class="label">My Listings</p>
+            <button class="btn btn-solid" style="font-size:0.78rem;padding:0.4rem 1rem">+ Add Listing</button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;gap:1rem;align-items:center">
+              <div style="width:44px;height:44px;border-radius:8px;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">🍅</div>
+              <div style="flex:1">
+                <strong style="font-size:0.9rem">Heritage Tomatoes</strong>
+                <p style="font-size:0.78rem;color:var(--muted)">Free · Active · 3 enquiries</p>
+              </div>
+              <span class="tag">Active</span>
+            </div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;gap:1rem;align-items:center">
+              <div style="width:44px;height:44px;border-radius:8px;background:#c5d9b5;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">🌿</div>
+              <div style="flex:1">
+                <strong style="font-size:0.9rem">Fresh Basil Bundles</strong>
+                <p style="font-size:0.78rem;color:var(--muted)">Free · Active · 1 enquiry</p>
+              </div>
+              <span class="tag">Active</span>
+            </div>
+            <div style="background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;gap:1rem;align-items:center;opacity:0.6">
+              <div style="width:44px;height:44px;border-radius:8px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0">🥬</div>
+              <div style="flex:1">
+                <strong style="font-size:0.9rem">Surplus Chard</strong>
+                <p style="font-size:0.78rem;color:var(--muted)">Free · Ended</p>
+              </div>
+              <span class="tag" style="background:var(--cream);color:var(--muted)">Ended</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDIT PROFILE -->
+        <div class="fade-up observe d1">
+          <p class="label" style="margin-bottom:1.25rem">Edit Profile</p>
+          <div class="form-group">
+            <label>Display Name</label>
+            <input type="text" value="Maria Kowalski" />
+          </div>
+          <div class="form-group">
+            <label>Location / Postcode</label>
+            <input type="text" value="East Side" />
+          </div>
+          <div class="form-group">
+            <label>About your garden</label>
+            <textarea>Growing tomatoes, herbs, and salad leaves in my raised beds. Happy to share surplus and chat about no-dig methods!</textarea>
+          </div>
+          <div class="form-group">
+            <label>What I grow</label>
+            <input type="text" value="Tomatoes, Basil, Salad, Courgette" placeholder="e.g. Tomatoes, Herbs, Beans" />
+          </div>
+          <button class="btn btn-solid">Save Changes</button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<style>
+  @media (max-width: 768px) {
+    .auth-layout { grid-template-columns: 1fr !important; }
+    .auth-layout > div:first-child { display: none; }
+    .profile-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function showProfile() {
+    document.getElementById('auth-view').style.display = 'none';
+    document.getElementById('profile-view').style.display = 'block';
+    document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
+      if (a.textContent.includes('Sign In') || a.textContent.includes('Profile')) {
+        a.textContent = a.textContent.includes('Sign') ? 'Profile' : a.textContent;
+      }
+    });
+  }
+  function showAuth() {
+    document.getElementById('auth-view').style.display = 'flex';
+    document.getElementById('profile-view').style.display = 'none';
+  }
+</script>
+</body>
+</html>
