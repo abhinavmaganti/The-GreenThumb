@@ -1,4 +1,3 @@
-// Injects shared nav and footer into every page
 (function () {
   const navHTML = `
   <nav class="nav">
@@ -27,11 +26,11 @@
   </nav>
   <div class="mobile-menu">
     <a href="index.html">Home</a>
-    <a href="plants.html">🌿 Plants</a>
-    <a href="marketplace.html">🛒 Marketplace</a>
-    <a href="community.html">💬 Community</a>
-    <a href="map.html">🗺 Map</a>
-    <a href="profile.html">👤 Profile</a>
+    <a href="plants.html">Plants</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="community.html">Community</a>
+    <a href="map.html">Map</a>
+    <a href="profile.html">Profile</a>
   </div>`;
 
   const footerHTML = `
@@ -46,7 +45,7 @@
           </svg>
           Green Thumb
         </a>
-        <p>Inspiring a shared food economy rooted in community, sustainability, and the simple joy of growing your own.</p>
+        <p>Inspiring a shared food economy rooted in community, practical growing knowledge, and the joy of producing food close to home.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -58,28 +57,24 @@
       <div class="footer-col">
         <h4>Learn</h4>
         <a href="plants.html">Garden Guides</a>
-        <a href="community.html#tips">Seasonal Tips</a>
         <a href="community.html">Forum</a>
-        <a href="#">Newsletter</a>
+        <a href="map.html">Find Growers</a>
       </div>
       <div class="footer-col">
         <h4>About</h4>
         <a href="index.html#mission">Our Mission</a>
-        <a href="#">Sustainability</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy Policy</a>
+        <a href="about.html">Meet the Creators</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Green Thumb. Better for you. Better for mother earth.</span>
-      <span style="opacity:0.5">Made with 🌿 love</span>
+      <span>© 2026 Green Thumb. Better for you. Better for the earth.</span>
+      <span style="opacity:0.65">Built for local growers and shared food communities.</span>
     </div>
   </footer>`;
 
-  // Inject nav before main
   const main = document.querySelector('main');
   if (main) main.insertAdjacentHTML('beforebegin', navHTML);
-
-  // Inject footer after main
   if (main) main.insertAdjacentHTML('afterend', footerHTML);
 })();
