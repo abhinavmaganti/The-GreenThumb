@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Green Thumb</title>
+  <meta name="description" content="Contact Green Thumb." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+  <section class="page-hero">
+    <p class="label fade-up d1">Contact</p>
+    <h1 class="display display-lg fade-up d2">Get in touch</h1>
+    <p class="fade-up d3">Use this page to send a message to the Green Thumb team and the community admins while the platform is still in its early stage.</p>
+  </section>
+
+  <section class="section">
+    <div class="grid-2" style="align-items:start;">
+      <div class="card fade-up observe" style="padding:1.5rem;">
+        <p class="label" style="margin-bottom:1rem;">Contact form</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks. Your message was captured in this front-end prototype.');">
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input id="contact-name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Your Email</label>
+            <input id="contact-email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-topic">Topic</label>
+            <select id="contact-topic">
+              <option>General Question</option>
+              <option>Account Help</option>
+              <option>Marketplace Issue</option>
+              <option>Community Moderation</option>
+              <option>Partnership / Collaboration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" placeholder="Tell us what you need help with." required></textarea>
+          </div>
+          <button class="btn btn-solid" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="card fade-up observe d1" style="padding:1.5rem;">
+        <p class="label" style="margin-bottom:1rem;">What this page is for</p>
+        <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;">Right now this page is a front-end contact screen for the prototype. Once you connect a real backend or email service, this form can route messages to moderators, support, or the creators directly.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
